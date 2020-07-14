@@ -1,0 +1,9 @@
+git init (inicializa o versionamento do projeto)
+
+git add * (transfere todos os arquivos para a are temporária)
+
+git add - A (transfere todos os arquivos modificados para a area temporária)
+
+git add *.js (transfere todos os arquivos javascript para a area temporária)
+
+git commit (comita para a area temporária)
