@@ -1,11 +1,18 @@
+// imports iniciais do sistema
 import mongoose from 'mongoose';
 
-// conectar ao mongodb atlas pelo mongoose
+require('dotenv').config();
+
+// conectar ao mongodb atlas pelo mongoose com função assincrona
 (async () => {
    try {
       // se fosse local mongoose.connect('mongodb://localhost/grades', {...});
       await mongoose.connect(
-         'mongodb+srv://nunesMongoUser:735RDzjNc0ccwvHx@cluster0.puuvl.mongodb.net/grades?retryWrites=true&w=majority',
+         'mongodb+srv://' +
+            process.env.USERDB +
+            ':' +
+            process.env.PWDDB +
+            '@cluster0.puuvl.mongodb.net/grades?retryWrites=true&w=majority',
          {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -16,6 +23,7 @@ import mongoose from 'mongoose';
    }
 })();
 
+// cria o model para o esquema
 const studentSchema = mongoose.Schema({
    name: {
       type: String,
@@ -63,3 +71,5 @@ new student({
 // .catch((err) => {
 //    console.log('Erro ao conectar ao MongoDB Atlas. ' + err);
 // });
+
+app.put('/');
