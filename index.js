@@ -1,8 +1,9 @@
+// iniciar a aplicação
+//node -r dotenv/config  --experimental-modules index.js
 // imports iniciais do sistema
 import mongoose from 'mongoose';
 
-require('dotenv').config();
-
+console.log(process.env.USERDB);
 // conectar ao mongodb atlas pelo mongoose com função assincrona
 (async () => {
    try {
@@ -71,6 +72,3 @@ new student({
 // .catch((err) => {
 //    console.log('Erro ao conectar ao MongoDB Atlas. ' + err);
 // });
-
-// voltamos com o put
-app.put('/');
