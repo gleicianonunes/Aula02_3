@@ -71,3 +71,6 @@ new student({
 // .catch((err) => {
 //    console.log('Erro ao conectar ao MongoDB Atlas. ' + err);
 // });
+
+// voltamos com o put
+app.put('/');
