@@ -74,3 +74,4 @@ new student({
 
 // voltamos com o put
 app.put('/');
+app.put('/clientes/');
