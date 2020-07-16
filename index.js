@@ -1,4 +1,4 @@
-// iniciar a aplicação
+// iniciar a aplicação com dotenv
 //node -r dotenv/config  --experimental-modules index.js
 // imports iniciais do sistema
 import mongoose from 'mongoose';
