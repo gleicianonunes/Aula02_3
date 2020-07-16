@@ -71,5 +71,3 @@ new student({
 // .catch((err) => {
 //    console.log('Erro ao conectar ao MongoDB Atlas. ' + err);
 // });
-
-app.put('/');
